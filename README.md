@@ -49,6 +49,25 @@ Waveform
 → Mel-spectrogram
 → log-Mel spectrogram
 ```
+### 03 — Audio Classification with ESC-50
+
+The third notebook builds a complete audio classification baseline using a real-world subset of the ESC-50 dataset.
+
+It covers:
+
+- exploring ESC-50 metadata;
+- selecting five balanced sound classes;
+- loading and listening to real audio samples;
+- resampling audio to 16 kHz;
+- extracting 13 MFCC coefficients;
+- converting variable-length MFCC sequences into fixed 26-feature vectors;
+- splitting train and test sets using the official ESC-50 folds;
+- standardizing features without data leakage;
+- training a k-nearest neighbors classifier;
+- evaluating the model with accuracy, a confusion matrix, precision, recall and F1-score;
+- inspecting misclassified audio examples.
+
+The baseline achieved 75% accuracy on the held-out test fold.
 
 ## Repository structure
 
@@ -56,8 +75,10 @@ Waveform
 .
 ├── notebooks/
 │   ├── 01_audio_basics.ipynb
-│   └── 02_spectrograms_and_mel_features.ipynb
+│   ├── 02_spectrograms_and_mel_features.ipynb
+│   └── 03_audio_classification.ipynb
 ├── audio_samples/
+├── data/
 ├── outputs/
 ├── src/
 └── README.md
@@ -71,7 +92,8 @@ Waveform
 * Matplotlib
 * SoundFile
 * Librosa
-
+* pandas 
+* scikit-learn
 ## Goal
 
 The goal of this repository is to build a strong practical foundation in speech and audio processing before moving toward modern Speech AI systems such as speech recognition, speaker analysis and voice generation.
