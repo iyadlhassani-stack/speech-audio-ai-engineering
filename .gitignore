@@ -9,3 +9,4 @@ audio_samples/*.wav
 audio_samples/*.mp3
 outputs/*.wav
 outputs/*.mp3
+data/
