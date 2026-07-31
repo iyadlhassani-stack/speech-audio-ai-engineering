@@ -69,6 +69,33 @@ It covers:
 
 The baseline achieved 75% accuracy on the held-out test fold.
 
+### 04 — Audio Classification Improvements
+
+The fourth notebook improves the previous ESC-50 baseline by introducing richer features and more rigorous evaluation.
+
+It covers:
+
+- extracting MFCC, delta MFCC and delta-delta features;
+- representing each audio file with 78 features;
+- evaluating several values of `k`;
+- using the five official ESC-50 folds;
+- comparing k-NN and SVM classifiers;
+- measuring mean accuracy, standard deviation and macro F1;
+- analyzing model performance fold by fold.
+
+The best k-NN configuration used `k = 3` and achieved:
+
+- 78.0% mean accuracy;
+- 2.92% standard deviation.
+
+The SVM with an RBF kernel achieved:
+
+- 84.5% mean accuracy;
+- 84.27% mean macro F1;
+- 5.79% standard deviation.
+
+The SVM became the strongest classical baseline in the repository.
+
 ## Repository structure
 
 ```text
@@ -76,7 +103,8 @@ The baseline achieved 75% accuracy on the held-out test fold.
 ├── notebooks/
 │   ├── 01_audio_basics.ipynb
 │   ├── 02_spectrograms_and_mel_features.ipynb
-│   └── 03_audio_classification.ipynb
+│   ├── 03_audio_classification.ipynb
+│   └── 04_audio_classification_improvements.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
