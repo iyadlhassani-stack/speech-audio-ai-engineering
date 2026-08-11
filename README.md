@@ -95,33 +95,105 @@ The SVM with an RBF kernel achieved:
 - 5.79% standard deviation.
 
 The SVM became the strongest classical baseline in the repository.
+## 05 — Speech Recognition (ASR)
+
+This notebook introduces automatic speech recognition and builds a complete ASR evaluation pipeline.
+
+### Topics covered
+
+- CTC decoding and blank tokens
+- Greedy decoding
+- Word Error Rate (WER)
+- Text normalization
+- Audio resampling to 16 kHz
+- Pretrained ASR with Whisper Tiny
+- Reference vs predicted transcription
+- Word-level error alignment
+- Substitutions, deletions and insertions
+- Error visualization and analysis
+
+### Experiment
+
+A 19-second French speech excerpt was transcribed using `openai/whisper-tiny`.
+
+Results:
+
+- WER: **26.47%**
+- Substitutions: **7**
+- Deletions: **2**
+- Insertions: **0**
+
+The main recognition difficulties involved proper nouns, rare vocabulary and phonetically ambiguous sequences.
 
 ## Repository structure
 
 ```text
-.
+```text
+speech-audio-ai-engineering/
+│
 ├── notebooks/
 │   ├── 01_audio_basics.ipynb
 │   ├── 02_spectrograms_and_mel_features.ipynb
 │   ├── 03_audio_classification.ipynb
-│   └── 04_audio_classification_improvements.ipynb
+│   ├── 04_audio_classification_improvements.ipynb
+│   └── 05_speech_recognition_asr.ipynb
+│
 ├── audio_samples/
+│   └── Local audio files used for experiments
+│
 ├── data/
+│   └── ESC-50 dataset (excluded from Git)
+│
 ├── outputs/
+│   └── Generated outputs and experiment results
+│
 ├── src/
+│   └── Reusable source code and utilities
+│
+├── .gitignore
 └── README.md
 ```
 
 ## Technologies
 
-* Python
-* Jupyter Notebook
-* NumPy
-* Matplotlib
-* SoundFile
-* Librosa
-* pandas 
-* scikit-learn
+Core
+Python
+Jupyter Notebook
+NumPy
+Pandas
+Matplotlib
+Audio Processing
+Librosa
+Waveform analysis
+Audio resampling
+FFT
+STFT and spectrograms
+Mel spectrograms
+MFCCs
+Delta and delta-delta features
+Machine Learning
+scikit-learn
+StandardScaler
+k-Nearest Neighbors (kNN)
+Support Vector Machines (SVM)
+Cross-validation
+Accuracy and Macro F1
+Confusion matrices
+Speech Recognition
+Hugging Face Transformers
+PyTorch
+OpenAI Whisper Tiny
+Automatic Speech Recognition (ASR)
+CTC decoding concepts
+Greedy decoding
+Text normalization
+Word Error Rate (WER)
+Word-level error alignment
+Substitution, deletion and insertion analysis
+Development Tools
+Git
+GitHub
+Python virtual environments (venv)
 ## Goal
 
 The goal of this repository is to build a strong practical foundation in speech and audio processing before moving toward modern Speech AI systems such as speech recognition, speaker analysis and voice generation.
