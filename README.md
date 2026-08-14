@@ -125,6 +125,41 @@ Results:
 
 The main recognition difficulties involved proper nouns, rare vocabulary and phonetically ambiguous sequences.
 
+## 06 — Whisper Architecture & Fine-Tuning
+
+This notebook opens the Whisper black box and explores how the model works internally.
+
+### Topics covered
+
+- WhisperProcessor
+- Whisper log-Mel input features
+- Encoder-decoder architecture
+- Autoregressive token generation
+- Whisper special tokens
+- Language and transcription task prompts
+- Manual transcription without `pipeline()`
+- Fine-tuning data preparation
+- Tokenization and labels
+- Padding and attention masks
+- Loss computation
+- Backpropagation
+- Optimizer step
+- Trainable vs frozen parameters
+- Full fine-tuning vs LoRA concepts
+
+### Experiment
+
+Using `openai/whisper-tiny`, the notebook follows the complete internal pipeline:
+
+```text
+Audio
+→ WhisperProcessor
+→ Log-Mel Features
+→ Encoder
+→ Decoder
+→ Tokens
+→ Transcription
+
 ## Repository structure
 
 ```text
@@ -136,20 +171,13 @@ speech-audio-ai-engineering/
 │   ├── 02_spectrograms_and_mel_features.ipynb
 │   ├── 03_audio_classification.ipynb
 │   ├── 04_audio_classification_improvements.ipynb
-│   └── 05_speech_recognition_asr.ipynb
+│   ├── 05_speech_recognition_asr.ipynb
+│   └── 06_whisper_architecture_finetuning.ipynb
 │
 ├── audio_samples/
-│   └── Local audio files used for experiments
-│
 ├── data/
-│   └── ESC-50 dataset (excluded from Git)
-│
 ├── outputs/
-│   └── Generated outputs and experiment results
-│
 ├── src/
-│   └── Reusable source code and utilities
-│
 ├── .gitignore
 └── README.md
 ```
@@ -192,11 +220,15 @@ speech-audio-ai-engineering/
 - OpenAI Whisper Tiny
 - Automatic Speech Recognition (ASR)
 - CTC decoding concepts
-- Greedy decoding
-- Text normalization
+- Whisper encoder-decoder architecture
+- Autoregressive decoding
+- WhisperProcessor and tokenizer
+- Log-Mel input features
+- Special tokens and generation prompts
 - Word Error Rate (WER)
-- Word-level error alignment
-- Substitution, deletion and insertion analysis
+- Fine-tuning fundamentals
+- Loss and backpropagation
+- Full fine-tuning vs LoRA concepts
 
 ### Development Tools
 
