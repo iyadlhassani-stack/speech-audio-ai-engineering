@@ -151,6 +151,39 @@ This notebook opens the Whisper black box and explores how the model works inter
 
 Using `openai/whisper-tiny`, the notebook follows the complete internal pipeline:
 
+## 07 — Whisper LoRA Fine-Tuning
+
+This notebook applies LoRA to Whisper Tiny using Hugging Face PEFT in order to fine-tune the model while updating only a very small fraction of its parameters.
+
+### Topics covered
+
+- LoRA configuration with PEFT
+- Targeting Whisper attention projections (`q_proj` and `v_proj`)
+- Trainable vs frozen parameters
+- Audio and transcription preprocessing
+- Whisper `input_features` and labels
+- LoRA forward pass and loss computation
+- Backpropagation with LoRA adapters
+- Mini fine-tuning loop
+- Loss monitoring
+- Transcription after adaptation
+- WER evaluation
+- Saving LoRA adapters
+
+### Results
+
+With LoRA applied to Whisper Tiny:
+
+- Trainable parameters: **147,456**
+- Total parameters: **37,908,096**
+- Trainable percentage: **0.389%**
+- Loss over the final 10 training steps: **2.4301 → 2.0615**
+- WER after LoRA on the training excerpt: **11.76%**
+
+LoRA allows Whisper to be adapted while training less than **1%** of the model parameters.
+
+> Note: the WER was measured on the same excerpt used for fine-tuning, so this experiment demonstrates adaptation rather than true generalization. A proper evaluation would require a separate validation or test set.
+
 ```text
 Audio
 → WhisperProcessor
@@ -173,6 +206,7 @@ speech-audio-ai-engineering/
 │   ├── 04_audio_classification_improvements.ipynb
 │   ├── 05_speech_recognition_asr.ipynb
 │   └── 06_whisper_architecture_finetuning.ipynb
+│   └── 07_whisper_lora_finetuning.ipynb
 │
 ├── audio_samples/
 ├── data/
@@ -229,6 +263,10 @@ speech-audio-ai-engineering/
 - Fine-tuning fundamentals
 - Loss and backpropagation
 - Full fine-tuning vs LoRA concepts
+- Hugging Face PEFT
+- LoRA (Low-Rank Adaptation)
+- Parameter-Efficient Fine-Tuning
+- LoRA adapter training and saving
 
 ### Development Tools
 
