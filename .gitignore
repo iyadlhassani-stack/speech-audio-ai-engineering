@@ -10,3 +10,4 @@ audio_samples/*.mp3
 outputs/*.wav
 outputs/*.mp3
 data/
+outputs/
