@@ -184,6 +184,32 @@ LoRA allows Whisper to be adapted while training less than **1%** of the model p
 
 > Note: the WER was measured on the same excerpt used for fine-tuning, so this experiment demonstrates adaptation rather than true generalization. A proper evaluation would require a separate validation or test set.
 
+## 08 — Speaker Recognition & Verification
+
+This notebook explores speaker recognition and speaker verification using SpeechBrain and ECAPA-TDNN.
+
+### Topics covered
+
+- Loading a pretrained ECAPA-TDNN speaker model
+- Speaker embeddings
+- Same-speaker vs different-speaker comparison
+- Cosine similarity
+- Speaker verification
+- Decision thresholds
+- False Accept Rate (FAR)
+- False Reject Rate (FRR)
+- Equal Error Rate (EER)
+- FAR / FRR visualization
+
+### Results
+
+- Same speaker cosine similarity: **0.778**
+- Different speakers cosine similarity: **-0.044**
+
+The model clearly separated the two speakers in this experiment.
+
+> Note: the threshold and EER calculations in this notebook are illustrative. A real speaker verification system should be calibrated and evaluated on many speaker pairs.
+
 ```text
 Audio
 → WhisperProcessor
@@ -207,7 +233,8 @@ speech-audio-ai-engineering/
 │   ├── 05_speech_recognition_asr.ipynb
 │   └── 06_whisper_architecture_finetuning.ipynb
 │   └── 07_whisper_lora_finetuning.ipynb
-│
+│   ├── 07_whisper_lora_finetuning.ipynb
+│   └── 08_speaker_recognition_verification.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
