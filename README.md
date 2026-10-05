@@ -210,6 +210,8 @@ The model clearly separated the two speakers in this experiment.
 
 > Note: the threshold and EER calculations in this notebook are illustrative. A real speaker verification system should be calibrated and evaluated on many speaker pairs.
 
+### Pipeline
+
 ```text
 Audio
 → WhisperProcessor
@@ -218,6 +220,32 @@ Audio
 → Decoder
 → Tokens
 → Transcription
+
+## 09 — Text-to-Speech (TTS)
+
+This notebook introduces Text-to-Speech generation using Kokoro.
+
+### Topics covered
+
+- Loading a pretrained Kokoro TTS pipeline
+- Text-to-speech generation
+- Phonemization and text normalization
+- Saving generated speech as WAV
+- Audio playback in Jupyter
+- Sample rate and duration analysis
+- Waveform visualization
+- Handling numbers, dates, abbreviations, and acronyms
+- Controlling speech speed
+
+### Pipeline
+
+```text
+Text
+→ Normalization
+→ Phonemes
+→ Kokoro TTS
+→ Waveform
+→ WAV
 
 ## Repository structure
 
@@ -235,6 +263,7 @@ speech-audio-ai-engineering/
 │   └── 07_whisper_lora_finetuning.ipynb
 │   ├── 07_whisper_lora_finetuning.ipynb
 │   └── 08_speaker_recognition_verification.ipynb
+│   └── 09_text_to_speech.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
