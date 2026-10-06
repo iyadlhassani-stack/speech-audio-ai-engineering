@@ -12,3 +12,4 @@ outputs/*.mp3
 data/
 outputs/
 audio_samples/
+.venv-f5/
