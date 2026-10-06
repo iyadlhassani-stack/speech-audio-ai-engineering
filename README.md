@@ -247,6 +247,64 @@ Text
 → Kokoro TTS
 → Waveform
 → WAV
+```
+## 10 — Voice Cloning & Voice Conversion
+
+This notebook explores zero-shot voice cloning and ASR + TTS based voice conversion.
+
+### Topics covered
+
+- F5-TTS setup and inference
+- Zero-shot voice cloning from a short reference audio
+- Reference audio preprocessing
+- Automatic reference transcription
+- Speaker identity preservation
+- Voice conversion using Whisper + F5-TTS
+- ECAPA-TDNN speaker embeddings
+- Cosine similarity evaluation
+- Comparison between cloned and converted speech
+
+### Voice Cloning Pipeline
+
+```text
+Reference speaker
++
+New text
+→ F5-TTS
+→ New speech with similar speaker identity
+```
+### Voice Conversion Pipeline
+
+```text
+Source speech
+→ Whisper ASR
+→ Transcript
++
+Target speaker reference
+→ F5-TTS
+→ Same linguistic content in the target voice
+```
+### Speaker Similarity Evaluation
+
+```text
+Audio
+→ ECAPA-TDNN
+→ Speaker embedding
+→ Cosine similarity
+```
+
+### Results
+
+- Voice cloning similarity: 0.6976
+- Voice conversion similarity: 0.7256
+Both outputs preserved a significant amount of the target speaker identity, with the voice conversion pipeline achieving a slightly higher similarity in this experiment.
+This notebook combines several previous concepts:
+- ASR with Whisper
+- speaker recognition with ECAPA-TDNN
+- TTS
+- zero-shot voice cloning
+- voice conversion
+- speaker similarity evaluation
 
 ## Repository structure
 
@@ -265,6 +323,7 @@ speech-audio-ai-engineering/
 │   ├── 07_whisper_lora_finetuning.ipynb
 │   └── 08_speaker_recognition_verification.ipynb
 │   └── 09_text_to_speech.ipynb
+│   └── 10_voice_cloning_conversion.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
