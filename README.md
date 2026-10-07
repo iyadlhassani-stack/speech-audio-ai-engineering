@@ -306,6 +306,31 @@ This notebook combines several previous concepts:
 - voice conversion
 - speaker similarity evaluation
 
+## 11 — Music Generation
+
+This notebook explores text-to-music generation using MusicGen, with a focus on hard techno.
+
+### Topics covered
+
+- Text-to-music generation
+- MusicGen inference
+- Prompt engineering
+- BPM and style conditioning
+- Hard techno variations
+- Audio playback
+- Waveform visualization
+- Spectrogram visualization
+
+### Pipeline
+
+```text
+Text Prompt
+→ MusicGen
+→ Audio Representation
+→ Decoder
+→ Generated Waveform
+```
+
 ## Repository structure
 
 ```text
@@ -324,6 +349,7 @@ speech-audio-ai-engineering/
 │   └── 08_speaker_recognition_verification.ipynb
 │   └── 09_text_to_speech.ipynb
 │   └── 10_voice_cloning_conversion.ipynb
+│   └── 11_music_generation.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
@@ -383,6 +409,25 @@ speech-audio-ai-engineering/
 - LoRA (Low-Rank Adaptation)
 - Parameter-Efficient Fine-Tuning
 - LoRA adapter training and saving
+
+### Speech Generation
+
+- Kokoro TTS
+- F5-TTS
+- Text-to-Speech (TTS)
+- Voice cloning
+- Voice conversion
+- SpeechBrain
+- ECAPA-TDNN
+- Speaker embeddings
+- Cosine similarity
+
+### Music Generation
+
+- MusicGen
+- Text-to-music generation
+- Prompt conditioning
+- Music prompt engineering
 
 ### Development Tools
 
