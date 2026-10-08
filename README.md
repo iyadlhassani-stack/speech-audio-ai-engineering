@@ -330,6 +330,27 @@ Text Prompt
 → Decoder
 → Generated Waveform
 ```
+## 12 — Audio-Language Models
+
+This notebook explores direct audio understanding using Qwen2-Audio and compares it with a classical Whisper ASR pipeline.
+
+### Topics covered
+
+- Audio-Language Models
+- Qwen2-Audio inference
+- Direct audio question answering
+- Language and speaker analysis
+- Audio content understanding
+- Comparison with Whisper ASR
+
+### Comparison
+
+Whisper:
+Audio → ASR → Text
+
+Qwen2-Audio:
+Audio → Multimodal Model → Understanding / Response
+
 
 ## Repository structure
 
@@ -350,6 +371,7 @@ speech-audio-ai-engineering/
 │   └── 09_text_to_speech.ipynb
 │   └── 10_voice_cloning_conversion.ipynb
 │   └── 11_music_generation.ipynb
+│   └── 12_audio_language_models.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
@@ -409,6 +431,9 @@ speech-audio-ai-engineering/
 - LoRA (Low-Rank Adaptation)
 - Parameter-Efficient Fine-Tuning
 - LoRA adapter training and saving
+- Qwen2-Audio
+- Audio-Language Models
+- Multimodal audio understanding
 
 ### Speech Generation
 
