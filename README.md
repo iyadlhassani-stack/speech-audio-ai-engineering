@@ -351,6 +351,28 @@ Audio → ASR → Text
 Qwen2-Audio:
 Audio → Multimodal Model → Understanding / Response
 
+## 13 — Real-Time Audio Processing
+
+This notebook explores the fundamentals of real-time audio processing using short audio chunks and simple Voice Activity Detection.
+
+### Topics covered
+
+- Real-time audio chunks
+- 20 ms frame processing
+- Processing latency
+- RMS energy analysis
+- Simple Voice Activity Detection
+- Speech vs silence classification
+- Streaming simulation
+- Real-Time Factor (RTF)
+
+### Pipeline
+
+Audio Stream
+→ 20 ms Chunks
+→ Feature Extraction
+→ Voice Activity Detection
+→ Real-Time Processing
 
 ## Repository structure
 
@@ -372,6 +394,7 @@ speech-audio-ai-engineering/
 │   └── 10_voice_cloning_conversion.ipynb
 │   └── 11_music_generation.ipynb
 │   └── 12_audio_language_models.ipynb
+│   └── 13_real_time_audio_processing.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
@@ -400,6 +423,10 @@ speech-audio-ai-engineering/
 - Mel spectrograms
 - MFCCs
 - Delta and delta-delta features
+- Real-time audio processing
+- Audio chunking
+- Voice Activity Detection (VAD)
+- Real-Time Factor (RTF)
 
 ### Machine Learning
 
