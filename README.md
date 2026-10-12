@@ -398,6 +398,29 @@ User / Weather Audio
 → Text-to-Speech
 → Spoken Response
 
+## 15 — Neural Audio Codecs
+
+This notebook explores how neural audio codecs compress continuous audio into discrete representations using quantization and Residual Vector Quantization.
+
+### Topics covered
+
+- Audio quantization
+- Discrete audio representations
+- Residual Vector Quantization (RVQ)
+- Reconstruction error
+- Mean Squared Error (MSE)
+- Codebook comparison
+- Bitrate vs reconstruction quality
+- EnCodec, DAC, SNAC, and Mimi
+
+### Pipeline
+
+Audio Waveform
+→ Quantization
+→ Residual Codebooks
+→ Discrete Audio Tokens
+→ Reconstruction
+
 ## Repository structure
 
 ```text
@@ -420,6 +443,7 @@ speech-audio-ai-engineering/
 │   └── 12_audio_language_models.ipynb
 │   └── 13_real_time_audio_processing.ipynb
 │   └── 14_voice_assistant_pipeline.ipynb
+│   └── 15_neural_audio_codecs.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
@@ -452,6 +476,13 @@ speech-audio-ai-engineering/
 - Audio chunking
 - Voice Activity Detection (VAD)
 - Real-Time Factor (RTF)
+- Neural audio codecs
+- Residual Vector Quantization (RVQ)
+- Audio quantization
+- EnCodec
+- DAC
+- SNAC
+- Mimi
 
 ### Machine Learning
 
