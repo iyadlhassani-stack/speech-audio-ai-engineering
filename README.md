@@ -446,6 +446,31 @@ Audio Stream
 → Start / End of Turn
 → Barge-In Detection
 
+## 17 — Streaming Speech-to-Speech
+
+This notebook explores the core ideas behind low-latency streaming speech-to-speech systems inspired by Moshi and Hibiki.
+
+### Topics covered
+
+- 80 ms streaming audio frames
+- Discrete audio token simulation
+- Parallel user and assistant streams
+- Inner-monologue text tokens
+- Frame-by-frame processing
+- Streaming latency
+- Real-Time Factor (RTF)
+- Full-duplex interaction
+
+### Pipeline
+
+User Audio Stream
+→ Audio Codec
+→ Discrete Audio Tokens
+→ Streaming Transformer
+→ Assistant Audio Tokens
+→ Audio Decoder
+→ Assistant Audio Stream
+
 ## Repository structure
 
 ```text
@@ -470,6 +495,7 @@ speech-audio-ai-engineering/
 │   └── 14_voice_assistant_pipeline.ipynb
 │   └── 15_neural_audio_codecs.ipynb
 │   └── 16_voice_activity_detection_turn_taking.ipynb
+│   └── 17_streaming_speech_to_speech.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
@@ -513,6 +539,16 @@ speech-audio-ai-engineering/
 - Turn-taking
 - Barge-in detection
 - Frame-based speech processing
+
+### Streaming Speech
+
+- Streaming speech-to-speech
+- Full-duplex audio
+- Discrete audio tokens
+- Moshi
+- Hibiki
+- Mimi codec
+- Real-Time Factor (RTF)
 
 ### Machine Learning
 
