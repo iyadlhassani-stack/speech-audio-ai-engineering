@@ -421,6 +421,31 @@ Audio Waveform
 → Discrete Audio Tokens
 → Reconstruction
 
+## 16 — Voice Activity Detection & Turn-Taking
+
+This notebook explores how conversational voice systems detect speech activity and manage user turns.
+
+### Topics covered
+
+- Frame-based audio processing
+- RMS-based Voice Activity Detection
+- Speech vs silence classification
+- Start-of-turn detection
+- End-of-turn detection
+- Consecutive-frame decision logic
+- Barge-in detection
+- Robust interruption handling
+
+### Pipeline
+
+Audio Stream
+→ Frames
+→ Voice Activity Detection
+→ Speech / Silence
+→ Turn-Taking Logic
+→ Start / End of Turn
+→ Barge-In Detection
+
 ## Repository structure
 
 ```text
@@ -444,6 +469,7 @@ speech-audio-ai-engineering/
 │   └── 13_real_time_audio_processing.ipynb
 │   └── 14_voice_assistant_pipeline.ipynb
 │   └── 15_neural_audio_codecs.ipynb
+│   └── 16_voice_activity_detection_turn_taking.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
@@ -483,6 +509,10 @@ speech-audio-ai-engineering/
 - DAC
 - SNAC
 - Mimi
+- Voice Activity Detection (VAD)
+- Turn-taking
+- Barge-in detection
+- Frame-based speech processing
 
 ### Machine Learning
 
