@@ -374,6 +374,30 @@ Audio Stream
 → Voice Activity Detection
 → Real-Time Processing
 
+## 14 — Voice Assistant Pipeline
+
+This notebook builds a complete weather-focused voice assistant by combining speech recognition, language understanding, and speech synthesis.
+
+### Topics covered
+
+- Whisper speech recognition
+- Weather transcript extraction
+- Context-based question answering
+- Qwen language model inference
+- Text-to-Speech generation
+- End-to-end latency measurement
+- Complete voice assistant function
+
+### Pipeline
+
+User / Weather Audio
+→ Whisper ASR
+→ Transcript
+→ Language Model
+→ Answer
+→ Text-to-Speech
+→ Spoken Response
+
 ## Repository structure
 
 ```text
@@ -395,6 +419,7 @@ speech-audio-ai-engineering/
 │   └── 11_music_generation.ipynb
 │   └── 12_audio_language_models.ipynb
 │   └── 13_real_time_audio_processing.ipynb
+│   └── 14_voice_assistant_pipeline.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
@@ -480,6 +505,14 @@ speech-audio-ai-engineering/
 - Text-to-music generation
 - Prompt conditioning
 - Music prompt engineering
+
+### Voice Assistant
+
+- Whisper ASR
+- Qwen2.5
+- Text-to-Speech
+- End-to-end voice pipelines
+- Latency measurement
 
 ### Development Tools
 
