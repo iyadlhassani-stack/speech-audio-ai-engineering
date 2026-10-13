@@ -471,6 +471,35 @@ User Audio Stream
 → Audio Decoder
 → Assistant Audio Stream
 
+## 18 — Anti-Spoofing & Audio Watermarking
+
+This notebook explores simple techniques for detecting synthetic audio and embedding hidden watermarks into audio signals.
+
+### Topics covered
+
+- Real-like vs synthetic-like audio
+- RMS energy
+- Zero-Crossing Rate
+- Spectral Centroid
+- Toy anti-spoofing score
+- Audio watermark embedding
+- FFT-based watermark detection
+- Automatic watermark verification
+- Watermark robustness to noise
+
+### Pipeline
+
+Audio
+→ Acoustic Feature Extraction
+→ Anti-Spoofing Score
+→ Real-like / Synthetic-like
+
+Generated Audio
+→ Watermark Embedding
+→ Watermarked Audio
+→ FFT Detection
+→ Watermark Present / Missing
+
 ## Repository structure
 
 ```text
@@ -496,6 +525,7 @@ speech-audio-ai-engineering/
 │   └── 15_neural_audio_codecs.ipynb
 │   └── 16_voice_activity_detection_turn_taking.ipynb
 │   └── 17_streaming_speech_to_speech.ipynb
+│   └── 18_anti_spoofing_audio_watermarking.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
@@ -610,6 +640,16 @@ speech-audio-ai-engineering/
 - Text-to-Speech
 - End-to-end voice pipelines
 - Latency measurement
+
+### Audio Security
+
+- Voice anti-spoofing
+- Audio watermarking
+- FFT
+- Spectral analysis
+- AASIST
+- RawNet2
+- AudioSeal
 
 ### Development Tools
 
