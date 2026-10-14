@@ -500,6 +500,44 @@ Generated Audio
 → FFT Detection
 → Watermark Present / Missing
 
+## 19 — Audio Evaluation Metrics
+
+This notebook explores several metrics used to evaluate speech and audio AI systems.
+
+### Topics covered
+
+- Word Error Rate (WER)
+- Character Error Rate (CER)
+- Mean Opinion Score (MOS)
+- Speaker similarity with cosine similarity
+- Average latency
+- P50, P95, and P99 latency
+- Multi-metric system comparison
+- Evaluation trade-offs between accuracy, quality, similarity, and speed
+
+### Evaluation overview
+
+ASR
+→ WER / CER
+
+TTS
+→ MOS
+
+Voice Cloning
+→ Speaker Similarity
+
+Speaker Verification
+→ EER
+
+Diarization
+→ DER
+
+Music Generation
+→ FAD / CLAP
+
+Streaming Speech-to-Speech
+→ Latency
+
 ## Repository structure
 
 ```text
@@ -526,6 +564,7 @@ speech-audio-ai-engineering/
 │   └── 16_voice_activity_detection_turn_taking.ipynb
 │   └── 17_streaming_speech_to_speech.ipynb
 │   └── 18_anti_spoofing_audio_watermarking.ipynb
+│   └── 19_audio_evaluation_metrics.ipynb
 ├── audio_samples/
 ├── data/
 ├── outputs/
@@ -650,6 +689,15 @@ speech-audio-ai-engineering/
 - AASIST
 - RawNet2
 - AudioSeal
+
+### Audio Evaluation
+
+- WER
+- CER
+- MOS
+- Cosine Similarity
+- Latency Percentiles
+- Multi-Metric Evaluation
 
 ### Development Tools
 
